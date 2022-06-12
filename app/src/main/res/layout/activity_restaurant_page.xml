@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Back button-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:elevation="24dp"
+                app:cardCornerRadius="50dp">
+
+                <ImageButton
+                    android:id="@+id/backBtn"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/round_button_back"
+                    android:contentDescription="@string/back"
+                    android:src="@drawable/back_arrow" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/expertProfilePic"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
+
+            <com.github.captain_miao.optroundcardview.OptRoundCardView
+                android:id="@+id/advancedCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="137dp"
+                android:layout_marginBottom="-20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cornerRadius_TopLeft="20dp"
+                app:cornerRadius_TopRight="20dp"
+                app:optRoundCardCornerRadius="20dp"
+                app:optRoundCardRightBottomCorner="false"
+                app:optRoundCardLeftBottomCorner="false"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/addFavorite"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:backgroundTint="@color/White_ish"
+                        android:src="@drawable/ic_favourite_button" />
+                    <ProgressBar
+                        android:id="@+id/favoriteProgressBar"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/White_ish"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="30dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:id="@+id/expertName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="72dp"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="Ayushi Sharma"
+                        android:textColor="@color/Pink_Magenta"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/expertExperience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Experience 5 years"
+                        android:textColor="@color/Pink_Magenta"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/expertPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Rs. 5/- per min"
+                        android:textColor="@color/Pink_Magenta"
+                        android:textSize="14sp" />
+
+                    <!--Rating-->
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <!--Rating star-->
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_baseline_star_half_24" />
+                        <!--Rating number-->
+                        <TextView
+                            android:id="@+id/expert_rating_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="4.5 "
+                            android:textColor="@color/Pink_Magenta" />
+
+                    </LinearLayout>
+
+
+                    <com.github.captain_miao.optroundcardview.OptRoundCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="31dp"
+                        android:backgroundTint="@color/White_ish"
+                        app:background_Color="@color/White_ish"
+                        app:cardCornerRadius="30dp"
+                        app:cornerRadius="30dp"
+                        app:optRoundCardCornerRadius="30dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/overviewBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/Blue_Turquoise"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="0dp"
+                                app:cornerRadius="30dp">
+
+                                <TextView
+                                    android:id="@+id/overviewBtnText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/poppins_semi_bold"
+                                    android:gravity="center"
+                                    android:text="Overview"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/reviewsBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/White_ish"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="0dp"
+                                app:cornerRadius="30dp">
+
+                                <TextView
+                                    android:id="@+id/reviewsBtnText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Reviews"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true">
+
+                        <LinearLayout
+                            android:id="@+id/overview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/main_service"
+                                android:textColor="@color/Pink_Magenta"
+                                android:textSize="16sp" />
+
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/Blue_Turquoise"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="0dp"
+                                android:layout_gravity="center"
+                                app:cornerRadius="30dp">
+
+                                <TextView
+                                    android:id="@+id/ExpertMainService"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/poppins_semi_bold"
+                                    android:gravity="center"
+                                    android:paddingLeft="6dp"
+                                    android:paddingRight="6dp"
+                                    android:text=" "
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+                            </androidx.cardview.widget.CardView>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/services"
+                                android:textColor="@color/Pink_Magenta"
+                                android:textSize="16sp" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/expert_services_Recycler"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:nestedScrollingEnabled="false"
+                                android:layout_marginTop="16dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/poojas"
+                                android:textColor="@color/Pink_Magenta"
+                                android:textSize="16sp" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/expert_poojas_Recycler"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:nestedScrollingEnabled="false"
+                                android:layout_marginTop="16dp" />
+                            <TextView
+                                android:id="@+id/noPujans"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text=" Sorry No Pujans"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/languages"
+                                android:textColor="@color/Pink_Magenta"
+                                android:textSize="16sp" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/expert_languages_Recycler"
+                                android:layout_width="wrap_content"
+                                android:nestedScrollingEnabled="false"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:orientation="horizontal" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/timings"
+                                android:textColor="@color/Pink_Magenta"
+                                android:textSize="16sp" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/overviewBn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/Blue_Turquoise"
+                                android:padding="16dp"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="0dp"
+                                app:cornerRadius="10dp">
+
+                                <TextView
+                                    android:id="@+id/expertTimings"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:textAlignment="center"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/timings_list"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/Pink_Magenta"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/expertBackground"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:lineHeight="28dp"
+                                android:text="@string/background_content"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="65dp"
+                                android:background="@color/white" />
+
+                        </LinearLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                    <RelativeLayout
+                        android:id="@+id/reviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginBottom="60dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/expert_reviews_Recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            android:layout_marginTop="20dp" />
+
+                        <ProgressBar
+                            android:id="@+id/reviewsProgressBar"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/White_ish"/>
+
+                        <TextView
+                            android:id="@+id/noReviews"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="No reviews"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:visibility="gone" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/expert_reviews_Recycler"
+                            android:backgroundTint="@color/white" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </com.github.captain_miao.optroundcardview.OptRoundCardView>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>
